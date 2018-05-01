@@ -1,0 +1,16 @@
+<%= form_tag posts_path, multipart: true do %>
+    <div class="form-group">
+        <%= label_tag :title,'타이틀', class: "control-label" %><br>
+        <%= text_field_tag :title, nil, class: "form-control"%>
+    </div>
+    <br>
+    <div class="form-group">
+        <%= label_tag :content,'내용', class: "control-label" %><br>
+        <%= text_area_tag :content, nil, :class =>'form-control', :rows => 7, :cols => 120, placeholder: "leave something!" %>
+    </div>
+    <br>
+    <div class="form-group">
+        <%= button_tag "write this" %>
+    </div>
+    <br>
+<% end %>

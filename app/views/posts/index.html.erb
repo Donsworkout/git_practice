@@ -1,0 +1,14 @@
+<h1>Posts#index</h1>
+<p>글이 들어갈 곳이에용</p>
+<br><br>
+<a href="/posts/new">글 쓰기</a>
+<br><br>
+<% if @posts.empty? %>
+    <h2>아무 글이 없네용</h2>
+<% else %>
+    <% @posts.each do |post| %>
+        <h2><%= post.title %></h2>
+        <p><%= post.content %></p>
+        <%= link_to "삭제 버튼", post_path(post), method: "delete" %>
+    <% end %>
+<% end %>
