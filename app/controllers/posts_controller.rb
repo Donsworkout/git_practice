@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
   
   def create
-      new_post = Post.new(title: params[:title],content: params[:content])
+      new_post = Post.new(title: params[:title],content1: params[:content1],content2: params[:content2],content3: params[:content3])
       if new_post.save
         redirect_to posts_path
       else
@@ -13,6 +13,9 @@ class PostsController < ApplicationController
       end
   end
   
+  def deco 
+  end 
+
   def new
   end
   

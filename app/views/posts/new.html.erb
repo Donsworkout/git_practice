@@ -1,13 +1,24 @@
+<h2>이것은 글을 쓰는 페이지</h2>
+<a href="/">뒤로가기</a>
+<br><br>
 <%= form_tag posts_path, multipart: true do %>
     <div class="form-group">
-        <%= label_tag :title,'타이틀', class: "control-label" %><br>
+        <%= label_tag :title,'타이틀', class: "control-label" %><br><br>
         <%= text_field_tag :title, nil, class: "form-control"%>
     </div>
     <br>
     <div class="form-group">
-        <%= label_tag :content,'내용', class: "control-label" %><br>
-        <%= text_area_tag :content, nil, :class =>'form-control', :rows => 7, :cols => 120, placeholder: "leave something!" %>
+        <%= label_tag :content1,'내용1', class: "control-label" %><br><br>
+        <%= text_area_tag :content1, nil, :class =>'form-control', :rows => 7, :cols => 120, placeholder: "leave something!" %>
     </div>
+    <div class="form-group">
+        <%= label_tag :content2,'내용2', class: "control-label" %><br><br>
+        <%= text_area_tag :content2, nil, :class =>'form-control', :rows => 7, :cols => 120, placeholder: "leave something!" %>
+    </div>
+    <div class="form-group">
+        <%= label_tag :content3,'내용3', class: "control-label" %><br><br>
+        <%= text_area_tag :content3, nil, :class =>'form-control', :rows => 7, :cols => 120, placeholder: "leave something!" %>
+    </div>    
     <br>
     <div class="form-group">
         <%= button_tag "write this" %>

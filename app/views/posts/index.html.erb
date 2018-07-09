@@ -1,14 +1,16 @@
-<h1>게시판</h1>
-<p>글이 들어갈 곳이에용</p>
+<h1>깃 실습 합니다! 배워 봅시다</h1>
+<a href="http://donsdev.me/visitors/new">김도현에게 방명록 쓰기</a>
 <br><br>
-<a href="/posts/new">글 쓰기</a>
+<a href="/posts/new">여기에다 글 쓰기</a>
 <br><br>
-<% if @posts.empty? %>
+<% if @posts.empty? %> 
     <h2>아무 글이 없네용</h2>
 <% else %>
     <% @posts.each do |post| %>
         <h2><%= post.title %></h2>
-        <p><%= post.content %></p>
+        <p><%= post.content1 %></p>
+        <p><%= post.content2 %></p>
+        <p><%= post.content3 %></p>
         <%= link_to "삭제 버튼", post_path(post), method: "delete" %>
     <% end %>
 <% end %>
